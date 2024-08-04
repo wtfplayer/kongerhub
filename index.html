@@ -1,10 +1,8 @@
-
 <!DOCTYPE HTML>
 <html lang="en">
 
 <head>
     <title>KongerHub</title>
-    <link rel="icon" type="image/x-icon" href="https://github.com/user-attachments/assets/d2fbae6f-5ae4-4e64-810d-a8ad36afea23">
     <meta charset="utf-8" />
     <meta name="theme-color" content="#FFFFFF">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -14,13 +12,12 @@
     <meta property="og:title" content="KongerHub" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="KongerHub is a free ROBLOX Script Hub that supports many of your favorite games!" />
-    <meta property="og:image" content="https://qph.cf2.quoracdn.net/main-qimg-300ba7d9f401c5687b383d35c4296f4c-lq" />
+    <meta property="og:image" content="https://github.com/user-attachments/assets/d9e8fcc2-0941-47b6-a8c8-cf80e4786096" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="800" />
-    <meta property="og:url" content="https://kongerhub.github.io" />
-    <link rel="canonical" href="https://kongerhub.github.io" />
-    <link href="https://fonts.googleapis.com/css2?display=swap&family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900" rel="stylesheet" type="text/css" />
+    <meta property="og:url" content="https://kongerhub.vercel.app" />
+    <link rel="canonical" href="https://kongerhub.vercel.app" />
     <style>
         html,
         body,
@@ -188,7 +185,7 @@
             min-width: 320px;
             overflow-x: hidden;
             word-wrap: break-word;
-            background-color: #080808;
+            background-color: #0A0A0A;
         }
 
         :root {
@@ -311,7 +308,6 @@
             position: relative;
             text-align: var(--alignment);
             z-index: 1;
-            transition: opacity 0.625s ease-in-out 0s;
         }
 
         #main>.inner {
@@ -368,10 +364,6 @@
             right: auto;
         }
 
-        body.is-loading #main {
-            opacity: 0;
-        }
-
         body.is-instant #main,
         body.is-instant #main>.inner>*,
         body.is-instant #main>.inner>section>* {
@@ -426,8 +418,7 @@
         }
 
         #image01 .frame {
-            width: 6rem;
-            border-radius: 100%;
+            width: 21.875rem;
             transition: none;
         }
 
@@ -480,10 +471,15 @@
 
         #text01 {
             text-align: center;
-            color: #FFFFFF;
-            font-family: 'Poppins', sans-serif;
-            font-size: 2em;
-            line-height: 1.5;
+            max-width: 89.75rem;
+            margin-left: var(--margin-left);
+            margin-right: var(--margin-right);
+            --margin-left: auto;
+            --margin-right: auto;
+            color: #F5F5F5;
+            font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+            font-size: 1.5em;
+            line-height: 1.25;
             font-weight: 700;
         }
 
@@ -496,27 +492,6 @@
         }
 
         #text01 span.p:nth-child(n + 2) {
-            margin-top: 1rem;
-        }
-
-        #text02 {
-            text-align: center;
-            color: #FFFFFF;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1em;
-            line-height: 1.5;
-            font-weight: 400;
-        }
-
-        #text02 a {
-            text-decoration: underline;
-        }
-
-        #text02 a:hover {
-            text-decoration: none;
-        }
-
-        #text02 span.p:nth-child(n + 2) {
             margin-top: 1rem;
         }
 
@@ -547,22 +522,22 @@
             --flex-alignment: center;
             --alignment: center;
             gap: 0.75rem;
-            flex-direction: column;
-            flex-wrap: nowrap;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
 
         #buttons01 li a {
             display: inline-flex;
-            width: 17.625rem;
+            width: 8.125rem;
             height: 2.5rem;
             line-height: 2.5rem;
             padding: 0 0.5rem;
             vertical-align: middle;
-            font-family: 'Poppins', sans-serif;
+            font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
             font-size: 1em;
             font-weight: 400;
-            border-radius: 0.625rem;
-            transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+            border-radius: 0.125rem;
+            transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
         }
 
         #buttons01 li a svg {
@@ -584,12 +559,185 @@
         }
 
         #buttons01 .button {
-            background-color: #610000;
             color: #FFFFFF;
+            border: solid 2px #FFFFFF;
         }
 
-        #buttons01 .button:hover {
-            background-color: #910000 !important;
+        #buttons01 li a:hover {
+            transform: scale(1.06);
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .container>.wrapper {
+            vertical-align: top;
+            position: relative;
+            max-width: 100%;
+            border-radius: inherit;
+        }
+
+        .container>.wrapper>.inner {
+            vertical-align: top;
+            position: relative;
+            max-width: 100%;
+            border-radius: inherit;
+            text-align: var(--alignment);
+        }
+
+        #main .container.full:first-child>.wrapper {
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+        }
+
+        #main .container.full:last-child>.wrapper {
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+        }
+
+        #main .container.full:first-child>.wrapper>.inner {
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+        }
+
+        #main .container.full:last-child>.wrapper>.inner {
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+        }
+
+        #container01>.wrapper {
+            display: inline-block;
+            width: 75rem;
+            background-color: transparent;
+        }
+
+        #container01>.wrapper>.inner {
+            --gutters: 2rem;
+            --padding-horizontal: 2rem;
+            --padding-vertical: 2rem;
+            padding: var(--padding-vertical) var(--padding-horizontal);
+        }
+
+        #container01.default>.wrapper>.inner>* {
+            margin-bottom: var(--spacing);
+            margin-top: var(--spacing);
+        }
+
+        #container01.default>.wrapper>.inner>*:first-child {
+            margin-top: 0 !important;
+        }
+
+        #container01.default>.wrapper>.inner>*:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        #container01.columns>.wrapper>.inner {
+            flex-wrap: wrap;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #container01.columns>.wrapper>.inner>* {
+            flex-grow: 0;
+            flex-shrink: 0;
+            max-width: 100%;
+            text-align: var(--alignment);
+            padding: 0 0 0 var(--gutters);
+        }
+
+        #container01.columns>.wrapper>.inner>*>* {
+            margin-bottom: var(--spacing);
+            margin-top: var(--spacing);
+        }
+
+        #container01.columns>.wrapper>.inner>*>*:first-child {
+            margin-top: 0 !important;
+        }
+
+        #container01.columns>.wrapper>.inner>*>*:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        #container01.columns>.wrapper>.inner>*:first-child {
+            margin-left: calc(var(--gutters) * -1);
+        }
+
+        #container01.default>.wrapper>.inner>.full {
+            margin-left: calc(var(--padding-horizontal) * -1);
+            max-width: none !important;
+            width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+
+        #container01.default>.wrapper>.inner>.full:first-child {
+            margin-top: calc(var(--padding-vertical) * -1) !important;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+        }
+
+        #container01.default>.wrapper>.inner>.full:last-child {
+            margin-bottom: calc(var(--padding-vertical) * -1) !important;
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+        }
+
+        #container01.columns>.wrapper>.inner>div>.full {
+            margin-left: calc(var(--gutters) * -0.5);
+            max-width: none !important;
+            width: calc(100% + var(--gutters) + 0.4725px);
+        }
+
+        #container01.columns>.wrapper>.inner>div:first-child>.full {
+            margin-left: calc(var(--padding-horizontal) * -1);
+            width: calc(100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) + 0.4725px);
+        }
+
+        #container01.columns>.wrapper>.inner>div:last-child>.full {
+            width: calc(100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) + 0.4725px);
+        }
+
+        #container01.columns>.wrapper>.inner>div>.full:first-child {
+            margin-top: calc(var(--padding-vertical) * -1) !important;
+        }
+
+        #container01.columns>.wrapper>.inner>div>.full:last-child {
+            margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        }
+
+        #container01.columns>.wrapper>.inner>div:first-child,
+        #container01.columns>.wrapper>.inner>div:first-child>.full:first-child {
+            border-top-left-radius: inherit;
+        }
+
+        #container01.columns>.wrapper>.inner>div:last-child,
+        #container01.columns>.wrapper>.inner>div:last-child>.full:first-child {
+            border-top-right-radius: inherit;
+        }
+
+        #container01.columns>.wrapper>.inner>.full {
+            align-self: stretch;
+        }
+
+        #container01.columns>.wrapper>.inner>.full:first-child {
+            border-bottom-left-radius: inherit;
+            border-top-left-radius: inherit;
+        }
+
+        #container01.columns>.wrapper>.inner>.full:last-child {
+            border-bottom-right-radius: inherit;
+            border-top-right-radius: inherit;
+        }
+
+        #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child {
+            border-radius: inherit;
+            height: calc(100% + (var(--padding-vertical) * 2));
+        }
+
+        #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child>* {
+            border-radius: inherit;
+            height: 100%;
+            position: absolute;
+            width: 100%;
         }
 
         .icc-credits {
@@ -672,7 +820,7 @@
         }
 
         #credits span {
-            color: rgba(255, 255, 255, 0.498);
+            color: rgba(245, 245, 245, 0.498);
             margin-top: 0.75rem !important;
         }
 
@@ -708,19 +856,13 @@
                 --spacing: 0.75rem;
             }
             #image01 .frame {
-                width: 6rem;
+                width: 21.875rem;
             }
             #text01 {
                 letter-spacing: 0rem;
                 width: 100%;
-                font-size: 2em;
-                line-height: 1.5;
-            }
-            #text02 {
-                letter-spacing: 0rem;
-                width: 100%;
-                font-size: 1em;
-                line-height: 1.5;
+                font-size: 1.5em;
+                line-height: 1.25;
             }
             #buttons01 {
                 gap: 0.75rem;
@@ -732,11 +874,90 @@
             #buttons01 li a svg {
                 width: 1em;
             }
+            #container01>.wrapper>.inner {
+                --gutters: 2rem;
+                --padding-horizontal: 2rem;
+                --padding-vertical: 2rem;
+            }
+            #container01.columns>.wrapper>.inner {
+                flex-direction: column !important;
+                flex-wrap: nowrap !important;
+            }
+            #container01.columns>.wrapper>.inner>span {
+                height: 0;
+                margin-top: calc(var(--gutters) * -1);
+                pointer-events: none;
+                visibility: hidden;
+            }
+            #container01.columns>.wrapper>.inner>*:first-child {
+                margin-left: 0 !important;
+                padding-top: 0 !important;
+            }
+            #container01.columns>.wrapper>.inner>* {
+                padding: calc(var(--gutters) * 0.5) 0 !important;
+            }
+            #container01.columns>.wrapper>.inner>*:last-child {
+                padding-bottom: 0 !important;
+            }
+            #container01.columns>.wrapper>.inner>div>.full {
+                margin-left: calc(var(--padding-horizontal) * -1);
+                width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+            }
+            #container01.columns>.wrapper>.inner>div:first-of-type>.full {
+                margin-left: calc(var(--padding-horizontal) * -1);
+                width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+            }
+            #container01.columns>.wrapper>.inner>div:last-of-type>.full {
+                margin-left: calc(var(--padding-horizontal) * -1);
+                width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+            }
+            #container01.columns>.wrapper>.inner>div>.full:first-child {
+                margin-top: calc(var(--gutters) * -0.5) !important;
+            }
+            #container01.columns>.wrapper>.inner>div>.full:last-child {
+                margin-bottom: calc(var(--gutters) * -0.5) !important;
+            }
+            #container01.columns>.wrapper>.inner>div:first-of-type>.full:first-child {
+                margin-top: calc(var(--padding-vertical) * -1) !important;
+            }
+            #container01.columns>.wrapper>.inner>div:last-of-type>.full:last-child {
+                margin-bottom: calc(var(--padding-vertical) * -1) !important;
+            }
+            #container01.columns>.wrapper>.inner>div:first-of-type,
+            #container01.columns>.wrapper>.inner>div:first-of-type>.full:first-child {
+                border-top-left-radius: inherit;
+                border-top-right-radius: inherit;
+            }
+            #container01.columns>.wrapper>.inner>div:last-of-type,
+            #container01.columns>.wrapper>.inner>div:last-of-type>.full:last-child {
+                border-bottom-left-radius: inherit;
+                border-bottom-right-radius: inherit;
+            }
+            #container01.columns>.wrapper>.inner>div:first-of-type,
+            #container01.columns>.wrapper>.inner>div:first-of-type>.full:last-child {
+                border-bottom-left-radius: 0 !important;
+            }
+            #container01.columns>.wrapper>.inner>div:last-of-type,
+            #container01.columns>.wrapper>.inner>div:last-of-type>.full:first-child {
+                border-top-right-radius: 0 !important;
+            }
+            #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child {
+                height: auto;
+            }
+            #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child>* {
+                height: auto;
+                position: relative;
+                width: auto;
+            }
         }
 
         @media (max-width: 480px) {
             #main>.inner {
                 --spacing: 0.65625rem;
+            }
+            #buttons01 {
+                flex-direction: column;
+                flex-wrap: nowrap;
             }
             #buttons01 li a {
                 max-width: 32rem;
@@ -753,27 +974,35 @@
             #text01 {
                 font-size: 1.5em;
             }
-            #text02 {
-                font-size: 1em;
-            }
             #buttons01 {
                 gap: 0.5625rem;
             }
+            #container01>.wrapper>.inner {
+                --gutters: 1.5rem;
+                --padding-horizontal: 1.5rem;
+                --padding-vertical: 1.5rem;
+            }
         }
-    </style><noscript><style>body {overflow: auto !important;}#main {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}</style></noscript></head>
+    </style>
+</head>
 
-<body class="is-loading"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0"><symbol id="icon-3b7eeeccbb457780f277fce4669f67a0" viewBox="0 0 40 40"><path d="M33.2,8.3c-2.5-1.1-5.1-1.9-7.9-2.4c-0.3,0.6-0.7,1.4-1,2c-2.9-0.4-5.8-0.4-8.7,0c-0.3-0.6-0.7-1.4-1-2 c-2.8,0.5-5.4,1.3-7.9,2.4c-5,7.2-6.3,14.2-5.6,21.1c3.3,2.3,6.5,3.8,9.6,4.7c0.8-1,1.5-2.1,2.1-3.3c-1.1-0.4-2.2-0.9-3.2-1.5 c0.3-0.2,0.5-0.4,0.8-0.6c6.3,2.8,13,2.8,19.2,0c0.3,0.2,0.5,0.4,0.8,0.6c-1,0.6-2.1,1.1-3.2,1.5c0.6,1.1,1.3,2.2,2.1,3.3 c3.1-0.9,6.3-2.4,9.6-4.7C39.7,21.4,37.5,14.4,33.2,8.3z M13.7,25.1c-1.9,0-3.4-1.7-3.4-3.7s1.5-3.7,3.4-3.7c1.9,0,3.5,1.7,3.4,3.7 C17.1,23.4,15.6,25.1,13.7,25.1z M26.3,25.1c-1.9,0-3.4-1.7-3.4-3.7s1.5-3.7,3.4-3.7c1.9,0,3.5,1.7,3.4,3.7 C29.7,23.4,28.2,25.1,26.3,25.1z"/></symbol><symbol id="icon-a63c85b2b6ee333b6d6753e57c8dfe0a" viewBox="0 0 40 40"><path d="M37.6,27.1c0,0-0.3,2.4-1.4,3.5c-1.4,1.4-2.9,1.4-3.6,1.5c-5,0.4-12.4,0.4-12.4,0.4s-9.2-0.1-12.1-0.4 c-0.8-0.1-2.6-0.1-3.9-1.5c-1.1-1.1-1.4-3.5-1.4-3.5s-0.4-2.9-0.4-5.7v-2.7c0-2.9,0.4-5.7,0.4-5.7s0.3-2.4,1.4-3.5 C5.5,8,7,8,7.7,7.9c5-0.4,12.4-0.4,12.4-0.4h0c0,0,7.5,0,12.4,0.4C33.3,8,34.8,8,36.2,9.4c1.1,1.1,1.4,3.5,1.4,3.5s0.4,2.9,0.4,5.7 v2.7C37.9,24.2,37.6,27.1,37.6,27.1z M16.5,14.6l0,9.9l9.6-5L16.5,14.6z" /></symbol></svg>
+<body><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0"><symbol id="icon-3b7eeeccbb457780f277fce4669f67a0" viewBox="0 0 40 40"><path d="M33.2,8.3c-2.5-1.1-5.1-1.9-7.9-2.4c-0.3,0.6-0.7,1.4-1,2c-2.9-0.4-5.8-0.4-8.7,0c-0.3-0.6-0.7-1.4-1-2 c-2.8,0.5-5.4,1.3-7.9,2.4c-5,7.2-6.3,14.2-5.6,21.1c3.3,2.3,6.5,3.8,9.6,4.7c0.8-1,1.5-2.1,2.1-3.3c-1.1-0.4-2.2-0.9-3.2-1.5 c0.3-0.2,0.5-0.4,0.8-0.6c6.3,2.8,13,2.8,19.2,0c0.3,0.2,0.5,0.4,0.8,0.6c-1,0.6-2.1,1.1-3.2,1.5c0.6,1.1,1.3,2.2,2.1,3.3 c3.1-0.9,6.3-2.4,9.6-4.7C39.7,21.4,37.5,14.4,33.2,8.3z M13.7,25.1c-1.9,0-3.4-1.7-3.4-3.7s1.5-3.7,3.4-3.7c1.9,0,3.5,1.7,3.4,3.7 C17.1,23.4,15.6,25.1,13.7,25.1z M26.3,25.1c-1.9,0-3.4-1.7-3.4-3.7s1.5-3.7,3.4-3.7c1.9,0,3.5,1.7,3.4,3.7 C29.7,23.4,28.2,25.1,26.3,25.1z"/></symbol><symbol id="icon-a63c85b2b6ee333b6d6753e57c8dfe0a" viewBox="0 0 40 40"><path d="M37.6,27.1c0,0-0.3,2.4-1.4,3.5c-1.4,1.4-2.9,1.4-3.6,1.5c-5,0.4-12.4,0.4-12.4,0.4s-9.2-0.1-12.1-0.4 c-0.8-0.1-2.6-0.1-3.9-1.5c-1.1-1.1-1.4-3.5-1.4-3.5s-0.4-2.9-0.4-5.7v-2.7c0-2.9,0.4-5.7,0.4-5.7s0.3-2.4,1.4-3.5 C5.5,8,7,8,7.7,7.9c5-0.4,12.4-0.4,12.4-0.4h0c0,0,7.5,0,12.4,0.4C33.3,8,34.8,8,36.2,9.4c1.1,1.1,1.4,3.5,1.4,3.5s0.4,2.9,0.4,5.7 v2.7C37.9,24.2,37.6,27.1,37.6,27.1z M16.5,14.6l0,9.9l9.6-5L16.5,14.6z" /></symbol></svg>
     <div
         id="wrapper">
         <div id="main">
             <div class="inner">
-                <div id="image01" class="image"><span class="frame"><img src="assets/images/image01.jpg?v=2b35941b" alt="" /></span></div>
-                <h1 id="text01">KongerHub</h1>
-                <p id="text02"><strong>Roblox Script Hub: Without ADS/KEY</strong></p>
-                <ul id="buttons01" class="buttons">
-                    <li><a href="https://discord.gg/3F5UrVVKhV" class="button n01"><svg aria-labelledby="icon-title"><title id="icon-title">Discord</title><use xlink:href="#icon-3b7eeeccbb457780f277fce4669f67a0"></use></svg><span class="label">Join KongerHub Discord</span></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCZ0kCBCn7LHC5JuKjx34VAw" class="button n02"><svg aria-labelledby="icon-title"><title id="icon-title">YouTube (Alt)</title><use xlink:href="#icon-a63c85b2b6ee333b6d6753e57c8dfe0a"></use></svg><span class="label">Visit KongerHub YT Channel</span></a></li>
-                </ul>
+                <div id="container01" class="container default">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div id="image01" class="image"><span class="frame"><img src="https://github.com/user-attachments/assets/20476174-0893-456a-b609-e5d4a365adae" alt="" /></span></div>
+                            <h1 id="text01">A Roblox Script Hub that supports many of your favorite games. (FREE NO KEYS)</h1>
+                            <ul id="buttons01" class="buttons">
+                                <li><a href="https://discord.gg/3F5UrVVKhV" class="button n01"><svg aria-labelledby="icon-title"><title id="icon-title">Discord</title><use xlink:href="#icon-3b7eeeccbb457780f277fce4669f67a0"></use></svg><span class="label">Script</span></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCZ0kCBCn7LHC5JuKjx34VAw" class="button n02"><svg aria-labelledby="icon-title"><title id="icon-title">YouTube (Alt)</title><use xlink:href="#icon-a63c85b2b6ee333b6d6753e57c8dfe0a"></use></svg><span class="label">Youtube</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
@@ -1046,17 +1275,6 @@
                         window.onerror = null;
                     }
                 };
-                var loadHandler = function() {
-                    setTimeout(function() {
-                        $body.classList.remove('is-loading');
-                        $body.classList.add('is-playing');
-                        setTimeout(function() {
-                            $body.classList.remove('is-playing');
-                            $body.classList.add('is-ready');
-                        }, 625);
-                    }, 100);
-                };
-                on('load', loadHandler);
                 loadElements(document.body);
                 var style, sheet, rule;
                 style = document.createElement('style');
@@ -1113,6 +1331,822 @@
                     })();
                     $body.classList.add('is-touch');
                 }
+                var scrollEvents = {
+                    items: [],
+                    add: function(o) {
+                        this.items.push({
+                            element: o.element,
+                            triggerElement: (('triggerElement' in o && o.triggerElement) ? o.triggerElement : o.element),
+                            enter: ('enter' in o ? o.enter : null),
+                            leave: ('leave' in o ? o.leave : null),
+                            mode: ('mode' in o ? o.mode : 4),
+                            threshold: ('threshold' in o ? o.threshold : 0.25),
+                            offset: ('offset' in o ? o.offset : 0),
+                            initialState: ('initialState' in o ? o.initialState : null),
+                            state: false,
+                        });
+                    },
+                    handler: function() {
+                        var height, top, bottom, scrollPad;
+                        if (client.os == 'ios') {
+                            height = document.documentElement.clientHeight;
+                            top = document.body.scrollTop + window.scrollY;
+                            bottom = top + height;
+                            scrollPad = 125;
+                        } else {
+                            height = document.documentElement.clientHeight;
+                            top = document.documentElement.scrollTop;
+                            bottom = top + height;
+                            scrollPad = 0;
+                        }
+                        scrollEvents.items.forEach(function(item) {
+                            var elementTop, elementBottom, viewportTop, viewportBottom, bcr, pad, state, a, b;
+                            if (!item.enter && !item.leave) return true;
+                            if (!item.triggerElement) return true;
+                            if (item.triggerElement.offsetParent === null) {
+                                if (item.state == true && item.leave) {
+                                    item.state = false;
+                                    (item.leave).apply(item.element);
+                                    if (!item.enter) item.leave = null;
+                                }
+                                return true;
+                            }
+                            bcr = item.triggerElement.getBoundingClientRect();
+                            elementTop = top + Math.floor(bcr.top);
+                            elementBottom = elementTop + bcr.height;
+                            if (item.initialState !== null) {
+                                state = item.initialState;
+                                item.initialState = null;
+                            } else {
+                                switch (item.mode) {
+                                    case 1:
+                                    default:
+                                        state = (bottom > (elementTop - item.offset) && top < (elementBottom + item.offset));
+                                        break;
+                                    case 2:
+                                        a = (top + (height * 0.5));
+                                        state = (a > (elementTop - item.offset) && a < (elementBottom + item.offset));
+                                        break;
+                                    case 3:
+                                        a = top + (height * (item.threshold));
+                                        if (a - (height * 0.375) <= 0) a = 0;
+                                        b = top + (height * (1 - item.threshold));
+                                        if (b + (height * 0.375) >= document.body.scrollHeight - scrollPad) b = document.body.scrollHeight + scrollPad;
+                                        state = (b > (elementTop - item.offset) && a < (elementBottom + item.offset));
+                                        break;
+                                    case 4:
+                                        pad = height * item.threshold;
+                                        viewportTop = (top + pad);
+                                        viewportBottom = (bottom - pad);
+                                        if (Math.floor(top) <= pad) viewportTop = top;
+                                        if (Math.ceil(bottom) >= (document.body.scrollHeight - pad)) viewportBottom = bottom;
+                                        if ((viewportBottom - viewportTop) >= (elementBottom - elementTop)) {
+                                            state = ((elementTop >= viewportTop && elementBottom <= viewportBottom) || (elementTop >= viewportTop && elementTop <= viewportBottom) || (elementBottom >= viewportTop && elementBottom <= viewportBottom));
+                                        } else state = ((viewportTop >= elementTop && viewportBottom <= elementBottom) || (elementTop >= viewportTop && elementTop <= viewportBottom) || (elementBottom >= viewportTop && elementBottom <= viewportBottom));
+                                        break;
+                                }
+                            }
+                            if (state != item.state) {
+                                item.state = state;
+                                if (item.state) {
+                                    if (item.enter) {
+                                        (item.enter).apply(item.element);
+                                        if (!item.leave) item.enter = null;
+                                    }
+                                } else {
+                                    if (item.leave) {
+                                        (item.leave).apply(item.element);
+                                        if (!item.enter) item.leave = null;
+                                    }
+                                }
+                            }
+                        });
+                    },
+                    init: function() {
+                        on('load', this.handler);
+                        on('resize', this.handler);
+                        on('scroll', this.handler);
+                        (this.handler)();
+                    }
+                };
+                scrollEvents.init();
+                var onvisible = {
+                    effects: {
+                        'blur-in': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'filter ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.opacity = 0;
+                                this.style.filter = 'blur(' + (0.25 * intensity) + 'rem)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.filter = 'none';
+                            },
+                        },
+                        'zoom-in': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity, alt) {
+                                this.style.opacity = 0;
+                                this.style.transform = 'scale(' + (1 - ((alt ? 0.25 : 0.05) * intensity)) + ')';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'zoom-out': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity, alt) {
+                                this.style.opacity = 0;
+                                this.style.transform = 'scale(' + (1 + ((alt ? 0.25 : 0.05) * intensity)) + ')';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'slide-left': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function() {
+                                this.style.transform = 'translateX(100vw)';
+                            },
+                            play: function() {
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'slide-right': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function() {
+                                this.style.transform = 'translateX(-100vw)';
+                            },
+                            play: function() {
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'flip-forward': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity, alt) {
+                                this.style.opacity = 0;
+                                this.style.transformOrigin = '50% 50%';
+                                this.style.transform = 'perspective(1000px) rotateX(' + ((alt ? 45 : 15) * intensity) + 'deg)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'flip-backward': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity, alt) {
+                                this.style.opacity = 0;
+                                this.style.transformOrigin = '50% 50%';
+                                this.style.transform = 'perspective(1000px) rotateX(' + ((alt ? -45 : -15) * intensity) + 'deg)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'flip-left': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity, alt) {
+                                this.style.opacity = 0;
+                                this.style.transformOrigin = '50% 50%';
+                                this.style.transform = 'perspective(1000px) rotateY(' + ((alt ? 45 : 15) * intensity) + 'deg)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'flip-right': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity, alt) {
+                                this.style.opacity = 0;
+                                this.style.transformOrigin = '50% 50%';
+                                this.style.transform = 'perspective(1000px) rotateY(' + ((alt ? -45 : -15) * intensity) + 'deg)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'tilt-left': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity, alt) {
+                                this.style.opacity = 0;
+                                this.style.transform = 'rotate(' + ((alt ? 45 : 5) * intensity) + 'deg)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'tilt-right': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity, alt) {
+                                this.style.opacity = 0;
+                                this.style.transform = 'rotate(' + ((alt ? -45 : -5) * intensity) + 'deg)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'fade-right': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.opacity = 0;
+                                this.style.transform = 'translateX(' + (-1.5 * intensity) + 'rem)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'fade-left': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.opacity = 0;
+                                this.style.transform = 'translateX(' + (1.5 * intensity) + 'rem)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'fade-down': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.opacity = 0;
+                                this.style.transform = 'translateY(' + (-1.5 * intensity) + 'rem)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'fade-up': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.opacity = 0;
+                                this.style.transform = 'translateY(' + (1.5 * intensity) + 'rem)';
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'fade-in': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'opacity ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function() {
+                                this.style.opacity = 0;
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                            },
+                        },
+                        'fade-in-background': {
+                            type: 'manual',
+                            rewind: function() {
+                                this.style.removeProperty('--onvisible-delay');
+                                this.style.removeProperty('--onvisible-background-color');
+                            },
+                            play: function(speed, delay) {
+                                this.style.setProperty('--onvisible-speed', speed + 's');
+                                if (delay) this.style.setProperty('--onvisible-delay', delay + 's');
+                                this.style.setProperty('--onvisible-background-color', 'rgba(0,0,0,0.001)');
+                            },
+                        },
+                        'zoom-in-image': {
+                            type: 'transition',
+                            target: 'img',
+                            transition: function(speed, delay) {
+                                return 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function() {
+                                this.style.transform = 'scale(1)';
+                            },
+                            play: function(intensity) {
+                                this.style.transform = 'scale(' + (1 + (0.1 * intensity)) + ')';
+                            },
+                        },
+                        'zoom-out-image': {
+                            type: 'transition',
+                            target: 'img',
+                            transition: function(speed, delay) {
+                                return 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.transform = 'scale(' + (1 + (0.1 * intensity)) + ')';
+                            },
+                            play: function() {
+                                this.style.transform = 'none';
+                            },
+                        },
+                        'focus-image': {
+                            type: 'transition',
+                            target: 'img',
+                            transition: function(speed, delay) {
+                                return 'transform ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '') + ', ' + 'filter ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.transform = 'scale(' + (1 + (0.05 * intensity)) + ')';
+                                this.style.filter = 'blur(' + (0.25 * intensity) + 'rem)';
+                            },
+                            play: function(intensity) {
+                                this.style.transform = 'none';
+                                this.style.filter = 'none';
+                            },
+                        },
+                        'wipe-up': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.maskComposite = 'exclude';
+                                this.style.maskRepeat = 'no-repeat';
+                                this.style.maskImage = 'linear-gradient(0deg, black 100%, transparent 100%)';
+                                this.style.maskPosition = '0% 100%';
+                                this.style.maskSize = '100% 0%';
+                            },
+                            play: function() {
+                                this.style.maskSize = '110% 110%';
+                            },
+                        },
+                        'wipe-down': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.maskComposite = 'exclude';
+                                this.style.maskRepeat = 'no-repeat';
+                                this.style.maskImage = 'linear-gradient(0deg, black 100%, transparent 100%)';
+                                this.style.maskPosition = '0% 0%';
+                                this.style.maskSize = '100% 0%';
+                            },
+                            play: function() {
+                                this.style.maskSize = '110% 110%';
+                            },
+                        },
+                        'wipe-left': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.maskComposite = 'exclude';
+                                this.style.maskRepeat = 'no-repeat';
+                                this.style.maskImage = 'linear-gradient(90deg, black 100%, transparent 100%)';
+                                this.style.maskPosition = '100% 0%';
+                                this.style.maskSize = '0% 100%';
+                            },
+                            play: function() {
+                                this.style.maskSize = '110% 110%';
+                            },
+                        },
+                        'wipe-right': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.maskComposite = 'exclude';
+                                this.style.maskRepeat = 'no-repeat';
+                                this.style.maskImage = 'linear-gradient(90deg, black 100%, transparent 100%)';
+                                this.style.maskPosition = '0% 0%';
+                                this.style.maskSize = '0% 100%';
+                            },
+                            play: function() {
+                                this.style.maskSize = '110% 110%';
+                            },
+                        },
+                        'wipe-diagonal': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.maskComposite = 'exclude';
+                                this.style.maskRepeat = 'no-repeat';
+                                this.style.maskImage = 'linear-gradient(45deg, black 50%, transparent 50%)';
+                                this.style.maskPosition = '0% 100%';
+                                this.style.maskSize = '0% 0%';
+                            },
+                            play: function() {
+                                this.style.maskSize = '220% 220%';
+                            },
+                        },
+                        'wipe-reverse-diagonal': {
+                            type: 'transition',
+                            transition: function(speed, delay) {
+                                return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                            },
+                            rewind: function(intensity) {
+                                this.style.maskComposite = 'exclude';
+                                this.style.maskRepeat = 'no-repeat';
+                                this.style.maskImage = 'linear-gradient(135deg, transparent 50%, black 50%)';
+                                this.style.maskPosition = '100% 100%';
+                                this.style.maskSize = '0% 0%';
+                            },
+                            play: function() {
+                                this.style.maskSize = '220% 220%';
+                            },
+                        },
+                        'pop-in': {
+                            type: 'animate',
+                            keyframes: function(intensity) {
+                                let diff = (intensity + 1) * 0.025;
+                                return [{
+                                    opacity: 0,
+                                    transform: 'scale(' + (1 - diff) + ')',
+                                }, {
+                                    opacity: 1,
+                                    transform: 'scale(' + (1 + diff) + ')',
+                                }, {
+                                    opacity: 1,
+                                    transform: 'scale(' + (1 - (diff * 0.25)) + ')',
+                                    offset: 0.9,
+                                }, {
+                                    opacity: 1,
+                                    transform: 'scale(1)',
+                                }];
+                            },
+                            options: function(speed) {
+                                return {
+                                    duration: speed,
+                                    iterations: 1,
+                                };
+                            },
+                            rewind: function() {
+                                this.style.opacity = 0;
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                            },
+                        },
+                        'bounce-up': {
+                            type: 'animate',
+                            keyframes: function(intensity) {
+                                let diff = (intensity + 1) * 0.075;
+                                return [{
+                                    opacity: 0,
+                                    transform: 'translateY(' + diff + 'rem)',
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateY(' + (-1 * diff) + 'rem)',
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateY(' + (diff * 0.25) + 'rem)',
+                                    offset: 0.9,
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateY(0)',
+                                }];
+                            },
+                            options: function(speed) {
+                                return {
+                                    duration: speed,
+                                    iterations: 1,
+                                };
+                            },
+                            rewind: function() {
+                                this.style.opacity = 0;
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                            },
+                        },
+                        'bounce-down': {
+                            type: 'animate',
+                            keyframes: function(intensity) {
+                                let diff = (intensity + 1) * 0.075;
+                                return [{
+                                    opacity: 0,
+                                    transform: 'translateY(' + (-1 * diff) + 'rem)',
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateY(' + diff + 'rem)',
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateY(' + (-1 * (diff * 0.25)) + 'rem)',
+                                    offset: 0.9,
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateY(0)',
+                                }];
+                            },
+                            options: function(speed) {
+                                return {
+                                    duration: speed,
+                                    iterations: 1,
+                                };
+                            },
+                            rewind: function() {
+                                this.style.opacity = 0;
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                            },
+                        },
+                        'bounce-left': {
+                            type: 'animate',
+                            keyframes: function(intensity) {
+                                let diff = (intensity + 1) * 0.075;
+                                return [{
+                                    opacity: 0,
+                                    transform: 'translateX(' + diff + 'rem)',
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateX(' + (-1 * diff) + 'rem)',
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateX(' + (diff * 0.25) + 'rem)',
+                                    offset: 0.9,
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateX(0)',
+                                }];
+                            },
+                            options: function(speed) {
+                                return {
+                                    duration: speed,
+                                    iterations: 1,
+                                };
+                            },
+                            rewind: function() {
+                                this.style.opacity = 0;
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                            },
+                        },
+                        'bounce-right': {
+                            type: 'animate',
+                            keyframes: function(intensity) {
+                                let diff = (intensity + 1) * 0.075;
+                                return [{
+                                    opacity: 0,
+                                    transform: 'translateX(' + (-1 * diff) + 'rem)',
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateX(' + diff + 'rem)',
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateX(' + (-1 * (diff * 0.25)) + 'rem)',
+                                    offset: 0.9,
+                                }, {
+                                    opacity: 1,
+                                    transform: 'translateX(0)',
+                                }];
+                            },
+                            options: function(speed) {
+                                return {
+                                    duration: speed,
+                                    iterations: 1,
+                                };
+                            },
+                            rewind: function() {
+                                this.style.opacity = 0;
+                            },
+                            play: function() {
+                                this.style.opacity = 1;
+                            },
+                        },
+                    },
+                    regex: new RegExp('([a-zA-Z0-9\.\,\-\_\"\'\?\!\:\;\#\@\#$\%\&\(\)\{\}]+)', 'g'),
+                    add: function(selector, settings) {
+                        var _this = this,
+                            style = settings.style in this.effects ? settings.style : 'fade',
+                            speed = parseInt('speed' in settings ? settings.speed : 0),
+                            intensity = parseInt('intensity' in settings ? settings.intensity : 5),
+                            delay = parseInt('delay' in settings ? settings.delay : 0),
+                            replay = 'replay' in settings ? settings.replay : false,
+                            stagger = 'stagger' in settings ? (parseInt(settings.stagger) >= 0 ? parseInt(settings.stagger) : false) : false,
+                            staggerOrder = 'staggerOrder' in settings ? settings.staggerOrder : 'default',
+                            staggerSelector = 'staggerSelector' in settings ? settings.staggerSelector : null,
+                            threshold = parseInt('threshold' in settings ? settings.threshold : 3),
+                            state = 'state' in settings ? settings.state : null,
+                            effect = this.effects[style],
+                            enter, leave, scrollEventThreshold;
+                        if (window.CARRD_DISABLE_ANIMATION === true) {
+                            if (style == 'fade-in-background') $$(selector).forEach(function(e) {
+                                e.style.setProperty('--onvisible-background-color', 'rgba(0,0,0,0.001)');
+                            });
+                            return;
+                        }
+                        switch (threshold) {
+                            case 1:
+                                scrollEventThreshold = 0;
+                                break;
+                            case 2:
+                                scrollEventThreshold = 0.125;
+                                break;
+                            default:
+                            case 3:
+                                scrollEventThreshold = 0.25;
+                                break;
+                            case 4:
+                                scrollEventThreshold = 0.375;
+                                break;
+                            case 5:
+                                scrollEventThreshold = 0.475;
+                                break;
+                        }
+                        switch (effect.type) {
+                            default:
+                                case 'transition':
+                                intensity = ((intensity / 10) * 1.75) + 0.25;enter = function(children, staggerDelay = 0) {
+                                var _this = this,
+                                    transitionOrig;
+                                if (effect.target) _this = this.querySelector(effect.target);
+                                transitionOrig = _this.style.transition;
+                                _this.style.setProperty('backface-visibility', 'hidden');
+                                _this.style.transition = effect.transition.apply(_this, [speed / 1000, (delay + staggerDelay) / 1000]);
+                                effect.play.apply(_this, [intensity, !!children]);
+                                setTimeout(function() {
+                                    _this.style.removeProperty('backface-visibility');
+                                    _this.style.transition = transitionOrig;
+                                }, (speed + delay + staggerDelay) * 2);
+                            };leave = function(children) {
+                                var _this = this,
+                                    transitionOrig;
+                                if (effect.target) _this = this.querySelector(effect.target);
+                                transitionOrig = _this.style.transition;
+                                _this.style.setProperty('backface-visibility', 'hidden');
+                                _this.style.transition = effect.transition.apply(_this, [speed / 1000]);
+                                effect.rewind.apply(_this, [intensity, !!children]);
+                                setTimeout(function() {
+                                    _this.style.removeProperty('backface-visibility');
+                                    _this.style.transition = transitionOrig;
+                                }, speed * 2);
+                            };
+                            break;
+                            case 'animate':
+                                    enter = function(children, staggerDelay = 0) {
+                                    var _this = this,
+                                        transitionOrig;
+                                    if (effect.target) _this = this.querySelector(effect.target);
+                                    setTimeout(() => {
+                                        effect.play.apply(_this, []);
+                                        _this.animate(effect.keyframes.apply(_this, [intensity]), effect.options.apply(_this, [speed, delay]));
+                                    }, delay + staggerDelay);
+                                };leave = function(children) {
+                                    var _this = this,
+                                        transitionOrig;
+                                    if (effect.target) _this = this.querySelector(effect.target);
+                                    let a = _this.animate(effect.keyframes.apply(_this, [intensity]), effect.options.apply(_this, [speed, delay]));
+                                    a.reverse();
+                                    a.addEventListener('finish', () => {
+                                        effect.rewind.apply(_this, []);
+                                    });
+                                };
+                                break;
+                            case 'manual':
+                                    enter = function(children, staggerDelay = 0) {
+                                    var _this = this,
+                                        transitionOrig;
+                                    if (effect.target) _this = this.querySelector(effect.target);
+                                    effect.play.apply(_this, [speed / 1000, (delay + staggerDelay) / 1000, intensity]);
+                                };leave = function(children) {
+                                    var _this = this,
+                                        transitionOrig;
+                                    if (effect.target) _this = this.querySelector(effect.target);
+                                    effect.rewind.apply(_this, [intensity, !!children]);
+                                };
+                                break;
+                        }
+                        $$(selector).forEach(function(e) {
+                            var children, targetElement, triggerElement;
+                            if (stagger !== false && staggerSelector == ':scope > *') _this.expandTextNodes(e);
+                            children = (stagger !== false && staggerSelector) ? e.querySelectorAll(staggerSelector) : null;
+                            if (effect.target) targetElement = e.querySelector(effect.target);
+                            else targetElement = e;
+                            if (children) children.forEach(function(targetElement) {
+                                effect.rewind.apply(targetElement, [intensity, true]);
+                            });
+                            else effect.rewind.apply(targetElement, [intensity]);
+                            triggerElement = e;
+                            if (e.parentNode) {
+                                if (e.parentNode.dataset.onvisibleTrigger) triggerElement = e.parentNode;
+                                else if (e.parentNode.parentNode) {
+                                    if (e.parentNode.parentNode.dataset.onvisibleTrigger) triggerElement = e.parentNode.parentNode;
+                                }
+                            }
+                            scrollEvents.add({
+                                element: e,
+                                triggerElement: triggerElement,
+                                initialState: state,
+                                threshold: scrollEventThreshold,
+                                enter: children ? function() {
+                                    var staggerDelay = 0,
+                                        childHandler = function(e) {
+                                            enter.apply(e, [children, staggerDelay]);
+                                            staggerDelay += stagger;
+                                        },
+                                        a;
+                                    if (staggerOrder == 'default') {
+                                        children.forEach(childHandler);
+                                    } else {
+                                        a = Array.from(children);
+                                        switch (staggerOrder) {
+                                            case 'reverse':
+                                                a.reverse();
+                                                break;
+                                            case 'random':
+                                                a.sort(function() {
+                                                    return Math.random() - 0.5;
+                                                });
+                                                break;
+                                        }
+                                        a.forEach(childHandler);
+                                    }
+                                } : enter,
+                                leave: (replay ? (children ? function() {
+                                    children.forEach(function(e) {
+                                        leave.apply(e, [children]);
+                                    });
+                                } : leave) : null),
+                            });
+                        });
+                    },
+                    expandTextNodes: function(e) {
+                        var s, i, w, x;
+                        for (i = 0; i < e.childNodes.length; i++) {
+                            x = e.childNodes[i];
+                            if (x.nodeType != Node.TEXT_NODE) continue;
+                            s = x.nodeValue;
+                            s = s.replace(this.regex, function(x, a) {
+                                return '<text-node>' + escapeHtml(a) + '</text-node>';
+                            });
+                            w = document.createElement('text-node');
+                            w.innerHTML = s;
+                            x.replaceWith(w);
+                            while (w.childNodes.length > 0) {
+                                w.parentNode.insertBefore(w.childNodes[0], w);
+                            }
+                            w.parentNode.removeChild(w);
+                        }
+                    },
+                };
+                onvisible.add('#container01', {
+                    style: 'slide-right',
+                    speed: 1000,
+                    intensity: 5,
+                    threshold: 3,
+                    delay: 0,
+                    replay: false
+                });
                 ready.run();
             })();
         </script>
