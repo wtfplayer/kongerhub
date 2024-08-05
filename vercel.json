@@ -1,6 +1,6 @@
 {
   "rewrites": [
     { "source": "/discord", "destination": "/discord.html" },
-    { "source": "/shaders", "destination": "/shaders.html" }
+    { "source": "/shaders", "destination": "/shaders.html" 
   ]
 }
