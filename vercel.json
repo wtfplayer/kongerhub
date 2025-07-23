@@ -3,5 +3,6 @@
     { "source": "/discord", "destination": "/discord.html" },
     { "source": "/shaders", "destination": "/shaders.html" },
     { "source": "/opensource", "destination": "/opensource.html" }
+    { "source": "/webhook-deleter", "destination": "/webhook-deleter.html" }
   ]
 }
